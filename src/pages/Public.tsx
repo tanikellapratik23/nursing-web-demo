@@ -123,7 +123,18 @@ export function PublicLayout() {
       <footer>
         <div className="footer-grid">
           <div>
-            <div className="identity">CHARLOTTE</div>
+            <Link
+              to="/"
+              className="charlotte-wordmark footer-wordmark"
+              aria-label="Charlotte demo homepage"
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}assets/charlotte-wordmark.svg`}
+                alt="Charlotte"
+                width="270"
+                height="54"
+              />
+            </Link>
             <h3>Community Nurse Ready Initiative</h3>
             <p>School of Nursing · UNC Charlotte</p>
           </div>
