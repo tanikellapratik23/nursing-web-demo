@@ -39,7 +39,7 @@ export function Reports() {
               : d.assignments;
   const filename = (name: string) =>
     `cn-ready-${name}-${filters.year}-${filters.quarter === "All" ? "all-quarters" : "q" + filters.quarter}.csv`;
-  const warnings = quality(d);
+  const warnings = quality({ ...d, scholars: db.scholars });
   const summaries = Object.entries(summary).map(([metric, value]) => ({
     period: `${filters.year} / ${filters.quarter === "All" ? "All quarters" : "Q" + filters.quarter}`,
     metric,
